@@ -68,11 +68,8 @@
   .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px}
   .hero .photo{position:relative}
   .hero .photo img{width:100%;display:block;border-radius:4px;filter:grayscale(12%)}
-  .hero h1{font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:10px;letter-spacing:-.005em}
-  .hero .org{font-size:1.06rem;color:#3d444b;margin-bottom:22px}
-  .hero .spec{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:20px;line-height:1.55}
-  .hero .formal{font-size:.93rem;color:#79818a;line-height:1.7;margin-bottom:6px}
-  .hero .since{font-size:.95rem;font-weight:700;color:var(--ink);margin-top:10px}
+  .hero h1{font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:16px;letter-spacing:-.005em}
+  .hero .spec{font-size:1.05rem;color:#3d444b;margin-bottom:24px;line-height:1.65}
   .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 
   /* Цитата-девиз между линиями (модель ФПА) */
@@ -156,7 +153,7 @@
   #pdn h2{font-size:1.15rem;font-weight:700;margin-bottom:14px;color:var(--ink)}
 
   /* Мобильная липкая панель */
-  .mob-cta-bar{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:150;box-shadow:0 -6px 24px rgba(13,31,48,.16)}
+  .mob-cta-bar{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:150;box-shadow:0 -6px 24px rgba(13,31,48,.16);padding-bottom:env(safe-area-inset-bottom,0px)}
   .mico{width:18px;height:18px;margin-right:9px}
   .mob-cta{flex:1;display:none;align-items:center;justify-content:center;padding:15px 0;font-weight:700;text-decoration:none;font-size:1rem}
   .mob-cta.call{background:var(--navy);color:#fff}
@@ -203,10 +200,7 @@
     <div class="photo"><img src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат"></div>
     <div>
       <h1>Адвокат<br>Дементьев Александр Фёдорович</h1>
-      <p class="org">Адвокатский кабинет Дементьева Александра Фёдоровича</p>
-      <p class="spec">Строительные споры, банкротство, субсидиарная ответственность</p>
-      <p class="formal">Адвокат Адвокатской палаты Ярославской области.<br>Реестровый номер 76/966.</p>
-      <p class="since">Адвокатская практика с 2023 года.</p>
+      <p class="spec">Строительные споры, банкротство, субсидиарная ответственность. Приём в Королёве; суды Москвы и Московской области, веб-конференция по России.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="tel:+79992340701">Позвонить</a>
         <a class="btn btn-line" href="tg://resolve?phone=79992340701">Написать в Telegram</a>
@@ -326,7 +320,8 @@
     <div class="cols">
       <div>
         <b>Адвокатский кабинет Дементьева Александра Фёдоровича</b><br>
-        адвокат Дементьев А.Ф., реестровый номер 76/966, Адвокатская палата Ярославской области<br>
+        Адвокат Дементьев Александр Фёдорович, адвокатская практика с 2023 года.<br>
+        Адвокатская палата Ярославской области, реестровый номер 76/966.<br>
         <a href="tel:+79992340701">+7 999 234-07-01</a> · <a href="mailto:89992340701@ya.ru">89992340701@ya.ru</a>
       </div>
       <div class="f-right">
