@@ -83,8 +83,14 @@
   /* Специализация: карточки в духе ФПА (монохром, воздух) */
   .specs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
   .spec-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:38px 34px;text-align:left}
-  .spec-card .ico{width:46px;height:46px;margin-bottom:20px;color:var(--navy)}
-  .spec-card h3{font-size:1.18rem;font-weight:700;margin-bottom:12px}
+  .pains{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:920px;margin:0 auto}
+  .pain{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px}
+  .pain b{display:block;font-size:1.02rem;margin-bottom:5px;color:var(--ink);line-height:1.4}
+  .pain span{font-size:.94rem;color:#5d6b79;line-height:1.55}
+  .pain .tag{display:inline-block;font-size:.75rem;font-weight:700;background:#eef1f4;color:var(--accent);border:1px solid var(--line-dark);border-radius:5px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+
+  .spec-card .ico{width:46px;height:46px;margin:0 auto 20px;display:block}
+  .spec-card h3{font-size:1.18rem;font-weight:700;margin-bottom:12px;text-align:center}
   .spec-card p{font-size:.97rem;color:#454e57;line-height:1.65}
   .spec-card ul{list-style:none;margin-top:14px}
   .spec-card li{padding:7px 0;font-size:.95rem;color:#454e57;border-bottom:1px solid #f0f0ee}
@@ -163,7 +169,7 @@
     .head nav{display:none}
     .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:46px;padding-bottom:50px}
     .hero .photo{max-width:360px;margin:0 auto}
-    .specs,.cases,.steps{grid-template-columns:1fr}
+    .specs,.cases,.steps,.pains{grid-template-columns:1fr}
     .about .wrap,.contacts .wrap{grid-template-columns:1fr;gap:26px}
     .about-side{border-right:none;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:22px}
     .f-right{text-align:left}
@@ -183,6 +189,7 @@
   <div class="wrap">
     <nav>
       <a href="#about">Обо мне</a>
+      <a href="#when">Ситуации</a>
       <a href="#specs">Направления</a>
       <a href="#cases">Практика</a>
       <a href="#how">Порядок работы</a>
@@ -200,7 +207,7 @@
     <div class="photo"><img src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат"></div>
     <div>
       <h1>Адвокат<br>Дементьев Александр Фёдорович</h1>
-      <p class="spec">Строительные споры, банкротство, субсидиарная ответственность. Приём в Королёве; суды Москвы и Московской области, веб-конференция по России.</p>
+      <p class="spec">Строительные споры и банкротство: взыскание оплаты, недостатки работ, требования кредиторов, субсидиарная ответственность. Королёв и Московская область, суды Москвы и области, регионы — веб-конференция.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="tel:+79992340701">Позвонить</a>
         <a class="btn btn-line" href="tg://resolve?phone=79992340701">Написать в Telegram</a>
@@ -212,6 +219,23 @@
 <div class="quote">
   <p>Позиция по делу строится на документах и экспертизе, а не на обещаниях результата. Если спора нет — скажу об этом до подписания соглашения.</p>
 </div>
+
+<section id="when">
+  <div class="wrap">
+    <h2 class="sec-title">Когда ко мне обращаются</h2>
+    <p class="sec-sub">Опишите ситуацию по телефону или в Telegram — отвечу, чем могу помочь и как строилась бы работа.</p>
+    <div class="pains">
+      <div class="pain"><b>Заказчик не оплачивает выполненные работы</b><span>Взыскание долга, неустойки и убытков по договору подряда — от претензии до исполнения решения.</span></div>
+      <div class="pain"><b>Предъявлен иск о недостатках работ</b><span>Строительно-техническая экспертиза, проверка расчётов истца, встречные требования.</span></div>
+      <div class="pain"><b>Контрагент банкротится, не рассчитавшись</b><span>Включение требований в реестр в срок — позже восстановить почти невозможно.</span><span class="tag">срок — 2 месяца</span></div>
+      <div class="pain"><b>Заявлена субсидиарная ответственность</b><span>Защита директора и участников: анализ оснований, позиция по добросовестности.</span></div>
+      <div class="pain"><b>Решение есть, исполнения нет</b><span>Поиск активов должника, оспаривание вывода имущества, убытки с контролирующих лиц.</span></div>
+      <div class="pain"><b>Грозит реестр недобросовестных поставщиков</b><span>Оспаривание решения ФАС — потеря госзаказа на два года.</span></div>
+      <div class="pain"><b>Не возвращают гарантийное удержание</b><span>Истребование удержанного после истечения гарантийного срока по объекту.</span></div>
+      <div class="pain"><b>Односторонний отказ от договора подряда</b><span>Последствия отказа заказчика: возврат аванса, оплата фактически выполненных работ.</span></div>
+    </div>
+  </div>
+</section>
 
 <section id="specs">
   <div class="wrap">
@@ -273,15 +297,14 @@
   <div class="wrap">
     <div class="about-side">
       <h2>Обо мне</h2>
-      <p class="formal-line">Адвокат Адвокатской палаты Ярославской области, реестровый номер 76/966.</p>
-      <p class="formal-line">Приём в Королёве (Бурковский проезд, 40к1) и дистанционно.</p>
+      <p class="formal-line">Работа с клиентом — по телефону и в Telegram, документы — на электронную почту.</p>
       <p class="formal-line">Суды Москвы и Московской области — лично; иные регионы — веб-конференция (ст. 153.1 АПК РФ).</p>
-      <p class="formal-line">Договоры по 44-ФЗ и 223-ФЗ, корпоративные договоры подряда, взыскание по КС-2/КС-3.</p>
+      <p class="formal-line">Спорные вопросы по договорам строительного подряда, взыскание по КС-2/КС-3.</p>
     </div>
     <div class="about-main">
       <p>Статус адвоката присвоен в 2023 году, реестровый номер 76/966 (Адвокатская палата Ярославской области). До открытия кабинета вел судебную работу в составе юридических подразделений компаний строительной отрасли — от подготовки претензий до представления интересов в арбитражных судах.</p>
       <p>Сейчас веду дела по двум направлениям: споры из договоров строительного подряда и банкротные процессы, включая защиту руководителей при субсидиарной ответственности. Смежные требования — неустойка, убытки, обеспечительные меры — сопровождаю в рамках тех же дел.</p>
-      <p>Оценка перспектив и подготовка документов — дистанционно, очные встречи по договорённости в Королёве.</p>
+      <p>Вся подготовка — дистанционно: документы обсуждаются по телефону и в Telegram, без поездок в офис. Если для дела нужна личная встреча — договоримся в удобном месте.</p>
     </div>
   </div>
 </section>
@@ -302,9 +325,8 @@
   <div class="wrap">
     <div>
       <h2>Контакты</h2>
-      <div class="c-row"><span class="lbl">Телефон</span><span class="val"><a href="tel:+79992340701">+7 999 234-07-01</a> — также Telegram и WhatsApp</span></div>
+      <div class="c-row"><span class="lbl">Телефон</span><span class="val"><a href="tel:+79992340701">+7 999 234-07-01</a> — также Telegram</span></div>
       <div class="c-row"><span class="lbl">Почта</span><span class="val"><a href="mailto:89992340701@ya.ru">89992340701@ya.ru</a></span></div>
-      <div class="c-row"><span class="lbl">Адрес</span><span class="val">141060, Московская область, г. Королёв, мкр. Болшево, Бурковский проезд, д. 40, к. 1</span></div>
       <div class="c-row"><span class="lbl">Реестр</span><span class="val">Реестровый номер 76/966, Адвокатская палата Ярославской области</span></div>
     </div>
     <div class="side">
