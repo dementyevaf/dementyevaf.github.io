@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Дементьев Александр Фёдорович — адвокат. Строительные споры, банкротство</title>
+<title>Адвокат Дементьев Александр Фёдорович — строительные споры, банкротство</title>
 <meta name="description" content="Адвокат Дементьев Александр Фёдорович: споры по строительному подряду, банкротство, субсидиарная ответственность. Королёв, суды Москвы и Московской области, веб-конференции по России.">
 <link rel="canonical" href="https://adv-dementev.ru/">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
-<meta property="og:title" content="Дементьев Александр Фёдорович — адвокат">
+<meta property="og:title" content="Адвокат Дементьев Александр Фёдорович">
 <meta property="og:description" content="Строительные споры и банкротство. Королёв, суды Москвы и области, веб-конференции по России.">
 <meta property="og:image" content="https://adv-dementev.ru/assets/photo.jpg">
 <meta property="og:url" content="https://adv-dementev.ru/">
@@ -40,124 +40,132 @@
 }
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
   :root{
-    --bg:#f7f6f3; --card:#fff; --ink:#16212b; --muted:#5d6b79; --line:#e4e6e9;
-    --navy:#0d1f30; --navy2:#153049; --gold:#c9a45c; --gold2:#a8853f; --gold-dark:#7a5f24;
-    --container:1060px;
+    --bg:#fbfbfa; --card:#fff; --ink:#1c1f22; --muted:#6a7178; --line:#e8e8e6;
+    --navy:#17222c; --accent:#2e4a63; --line-dark:#dfe2e5;
+    --container:1040px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Manrope','Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.68;font-size:16.5px}
-  .wrap{max-width:var(--container);margin:0 auto;padding:0 32px}
-  h1,h2,h3{font-family:'Manrope',Arial,sans-serif}
+  body{font-family:'Raleway','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:16.5px}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 30px}
+  a{color:var(--accent)}
 
-  /* Шапка */
-  .head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .head .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px;gap:16px}
-  .head .brand{display:flex;align-items:center;gap:14px;color:var(--navy)}
-  .head .brand img{width:44px;height:44px;border-radius:8px}
-  .head .brand b{display:block;font-weight:800;font-size:1.02rem;line-height:1.3}
-  .head .brand small{display:block;font-weight:500;color:var(--muted);font-size:.84rem;line-height:1.3}
-  .head a.tel{color:var(--navy);text-decoration:none;font-weight:800;font-size:1.06rem;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
-  .head a.tel:hover{color:var(--gold2)}
+  /* ── Хедер: меню-якоря, как в модели ФПА ── */
+  .head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line)}
+  .head .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .head nav{display:flex;gap:26px;padding:16px 0}
+  .head nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.93rem;letter-spacing:.02em}
+  .head nav a:hover{color:var(--accent)}
+  .head .contact{display:flex;align-items:center;gap:18px}
+  .head .tel{font-weight:700;color:var(--navy);text-decoration:none;font-size:1rem;white-space:nowrap}
+  .head .connect{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);border-radius:6px;padding:8px 18px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.04em;white-space:nowrap}
+  .head .connect:hover{background:var(--accent);color:#fff}
 
-  /* Hero: портрет крупно, имя, специализация */
-  .poster{position:relative;background:linear-gradient(115deg,#0d1f30 0%,#12293e 55%,#183751 100%);color:#fff;overflow:hidden}
-  .poster .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;min-height:78vh;padding-top:84px;padding-bottom:76px}
-  .poster h1{font-size:clamp(1.7rem,3.1vw,2.5rem);font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:1.25;margin-bottom:14px}
-  .poster h1 small{display:block;font-size:.52em;font-weight:700;letter-spacing:.18em;color:var(--gold);margin-bottom:10px}
-  .poster .spec{font-size:clamp(1.02rem,1.5vw,1.18rem);color:#c9d5df;line-height:1.6;max-width:520px}
-  .poster .spec b{color:#fff;font-weight:700}
-  .poster .portrait{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4)}
-  .poster .portrait img{width:100%;display:block;object-fit:cover;aspect-ratio:4/5}
-  .poster .portrait::after{content:"";position:absolute;inset:0;border:1px solid rgba(201,164,92,.35);border-radius:16px}
-  .poster .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
-  .poster .btn{padding:15px 32px;font-size:1.04rem}
+  /* ── Hero по модели ФПА: имя → место работы → специализация → палата/реестр серым → практика с года ── */
+  .hero{background:#fff;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px}
+  .hero .photo{position:relative}
+  .hero .photo img{width:100%;display:block;border-radius:4px;filter:grayscale(12%)}
+  .hero h1{font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:800;line-height:1.2;margin-bottom:10px;letter-spacing:-.005em}
+  .hero .org{font-size:1.06rem;color:#3d444b;margin-bottom:22px}
+  .hero .spec{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:20px;line-height:1.55}
+  .hero .formal{font-size:.93rem;color:#79818a;line-height:1.7;margin-bottom:6px}
+  .hero .since{font-size:.95rem;font-weight:700;color:var(--ink);margin-top:10px}
+  .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 
-  section{padding:72px 0}
-  h2{font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:800;margin-bottom:34px;letter-spacing:.01em}
-  h2 .g{color:var(--gold2)}
+  /* Цитата-девиз между линиями (модель ФПА) */
+  .quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .quote p{max-width:640px;margin:0 auto;padding:34px 20px;text-align:center;font-style:italic;font-size:1.14rem;color:#39424b;line-height:1.6}
 
-  /* Направления практики: два больших блока */
-  .dirs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .dir{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 34px 30px}
-  .dir h3{font-size:1.28rem;font-weight:800;color:var(--navy);margin-bottom:16px;letter-spacing:.01em}
-  .dir ul{list-style:none}
-  .dir li{padding:10px 0 10px 24px;position:relative;border-bottom:1px dashed var(--line);font-size:.98rem;color:#38454f;line-height:1.55}
-  .dir li:last-child{border-bottom:none}
-  .dir li::before{content:"";position:absolute;left:2px;top:18px;width:8px;height:8px;border-radius:2px;background:var(--gold)}
+  section{padding:70px 0}
+  .sec-title{text-align:center;font-size:clamp(1.45rem,2.5vw,1.85rem);font-weight:800;margin-bottom:14px}
+  .sec-sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 44px;font-size:.99rem}
 
-  /* Принцип */
-  .principle{background:var(--navy);color:#e6edf3;border-radius:16px;padding:42px 48px;margin:10px 0}
-  .principle p{font-size:clamp(1.08rem,1.8vw,1.3rem);line-height:1.6}
-  .principle b{color:var(--gold)}
+  /* Специализация: карточки в духе ФПА (монохром, воздух) */
+  .specs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
+  .spec-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:38px 34px;text-align:left}
+  .spec-card .ico{width:46px;height:46px;margin-bottom:20px;color:var(--navy)}
+  .spec-card h3{font-size:1.18rem;font-weight:700;margin-bottom:12px}
+  .spec-card p{font-size:.97rem;color:#454e57;line-height:1.65}
+  .spec-card ul{list-style:none;margin-top:14px}
+  .spec-card li{padding:7px 0;font-size:.95rem;color:#454e57;border-bottom:1px solid #f0f0ee}
+  .spec-card li:last-child{border-bottom:none}
 
-  /* Кейсы */
-  .cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-  .case{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 26px}
-  .case b{display:block;font-size:1.04rem;line-height:1.45;margin-bottom:9px}
-  .case p{font-size:.95rem;color:var(--muted);line-height:1.6}
+  /* Практика */
+  .cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .case{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:28px 26px}
+  .case h3{font-size:1.03rem;font-weight:700;line-height:1.45;margin-bottom:10px}
+  .case p{font-size:.94rem;color:var(--muted);line-height:1.65}
+  .cases-note{margin-top:16px}
 
   /* Об адвокате */
-  .about{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:start}
-  .about .photo{width:100%;border-radius:16px;display:block;box-shadow:0 22px 56px rgba(13,31,48,.2)}
-  .about h2{margin-bottom:20px}
-  .about p{margin-bottom:14px;line-height:1.72}
-  .about .reg{margin-top:16px;padding:16px 20px;background:#eef1f4;border-radius:12px;font-size:.93rem;color:#41505c;line-height:1.6}
+  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start;padding-top:74px;padding-bottom:74px}
+  .about img.photo{width:100%;border-radius:4px}
+  .about h2{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:800;margin-bottom:20px}
+  .about p{margin-bottom:14px;line-height:1.75}
+  .about .formal-line{font-size:.92rem;color:#79818a;line-height:1.7;padding-top:4px}
 
   /* Порядок работы */
-  .steps{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
-  .step{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;max-width:900px;margin:0 auto}
+  .step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
   .step:last-child,.step:nth-last-child(2):nth-child(odd){border-bottom:none}
-  .step .n{font-size:1.9rem;font-weight:800;color:var(--gold);line-height:1;min-width:44px}
-  .step b{display:block;font-size:1.06rem;margin-bottom:4px}
-  .step p{font-size:.95rem;color:var(--muted);line-height:1.6}
+  .step .n{font-size:1.05rem;font-weight:800;color:var(--accent);border:1.5px solid var(--accent);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .step b{display:block;font-size:1.03rem;margin-bottom:4px}
+  .step p{font-size:.94rem;color:var(--muted);line-height:1.62}
 
-  /* Финал */
-  .final{background:linear-gradient(115deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:78px 0;text-align:center}
-  .final h2{color:#fff;margin-bottom:14px}
-  .final p{color:#b7c7d4;font-size:1.06rem;max-width:620px;margin:0 auto 8px;line-height:1.65}
-  .final .cta-row{justify-content:center;margin-top:28px}
-  .final .note{font-size:.88rem;color:#8fa3b3;margin-top:16px}
+  /* Контакты по модели ФПА */
+  .contacts .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding-top:70px;padding-bottom:70px}
+  .contacts h2{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:800;margin-bottom:22px}
+  .contacts .c-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .contacts .c-row .lbl{min-width:120px;color:var(--muted);font-size:.9rem}
+  .contacts .c-row .val{font-weight:600;font-size:1.04rem}
+  .contacts .c-row .val a{text-decoration:none}
+  .contacts .side{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 32px;font-size:.96rem;line-height:1.7;color:#39424b}
+  .contacts .side b{display:block;margin-bottom:10px;font-size:1.05rem}
+  .contacts .side p{margin-bottom:10px}
 
-  .btn{display:inline-block;padding:14px 30px;border-radius:10px;text-decoration:none;font-weight:800;font-size:1.03rem;text-align:center;transition:transform .15s}
-  .btn:active{transform:scale(.98)}
-  .btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 8px 24px rgba(201,164,92,.3)}
-  .btn-gold:hover{background:#d8b66e}
-  .btn-outline-dark{border:2px solid rgba(255,255,255,.45);color:#fff}
+  /* Футер: 63-ФЗ + наверх */
+  footer{background:#141b22;color:#8a95a0;padding:44px 0 36px;font-size:.86rem;line-height:1.7}
+  footer .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+  footer b{color:#cdd5dc;font-weight:600}
+  footer a{color:#aeb9c2;text-decoration:none}
+  footer .top{float:right}
+  .footer-disclaimer{margin-top:18px;padding-top:18px;border-top:1px solid #232d36;color:#7d8892;font-size:.82rem}
 
-  .note{font-size:.83rem;color:var(--muted)}
+  /* Cookie-уведомление (модель ФПА, 152-ФЗ) */
+  .cookie{position:fixed;right:18px;bottom:18px;z-index:300;max-width:360px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.14);padding:18px 20px;font-size:.85rem;line-height:1.55;color:#3d444b;display:none}
+  .cookie button{margin-top:10px;background:var(--navy);color:#fff;border:none;border-radius:5px;padding:8px 22px;font-weight:700;font-size:.86rem;cursor:pointer}
+  .cookie button:hover{background:var(--accent)}
 
-  footer{background:#0a1622;color:#93a7b7;padding:50px 0 38px;font-size:.9rem}
-  footer .row{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
-  footer .brandline{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-  footer .brandline img{width:46px;height:46px;border-radius:9px;background:#152a3e;padding:6px}
-  footer .brandline b{color:#fff;font-size:1rem;display:block;line-height:1.3}
-  footer .brandline small{color:#7d92a5;font-size:.84rem}
-  footer a{color:#c9d6e0;text-decoration:none}
-  footer a:hover{color:var(--gold)}
 
-  .mob-cta-bar{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:200;box-shadow:0 -6px 24px rgba(13,31,48,.18)}
-  .mob-cta{flex:1;display:none;align-items:center;justify-content:center;padding:16px 0;font-weight:800;text-decoration:none;font-size:1.02rem}
-  @media(max-width:860px){
-    .dirs,.cases,.steps{grid-template-columns:1fr}
-    .about{grid-template-columns:1fr;gap:26px}
-    .about .photo{max-width:320px}
+  .btn{display:inline-block;padding:13px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.98rem;text-align:center;letter-spacing:.02em;transition:background .15s,color .15s}
+  .btn-solid{background:var(--navy);color:#fff}
+  .btn-solid:hover{background:var(--accent)}
+  .btn-line{border:1.5px solid var(--navy);color:var(--navy)}
+  .btn-line:hover{background:var(--navy);color:#fff}
+
+  /* Мобильная липкая панель */
+  .mob-cta-bar{position:fixed;bottom:0;left:0;right:0;display:flex;z-index:150;box-shadow:0 -6px 24px rgba(13,31,48,.16)}
+  .mob-cta{flex:1;display:none;align-items:center;justify-content:center;padding:15px 0;font-weight:700;text-decoration:none;font-size:1rem}
+  .mob-cta.call{background:var(--navy);color:#fff}
+  .mob-cta.wa{background:#2e4a63;color:#fff}
+
+  @media(max-width:900px){
+    .head nav{display:none}
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:46px;padding-bottom:50px}
+    .hero .photo{max-width:360px;margin:0 auto}
+    .specs,.cases,.steps{grid-template-columns:1fr}
+    .about .wrap,.contacts .wrap{grid-template-columns:1fr;gap:30px}
     section{padding:50px 0}
-    .poster .wrap{grid-template-columns:1fr;min-height:auto;padding-top:52px;padding-bottom:52px;gap:34px}
-    .poster .portrait{max-width:340px;margin:0 auto}
-    .poster .cta-row{justify-content:center}
-    .poster h1{text-align:center}
-    .poster .spec{margin:0 auto;text-align:center}
-    .head .brand small{display:none}
-    .head a.tel{font-size:.98rem}
+    .about .wrap{padding-top:50px;padding-bottom:50px}
+    .contacts .wrap{padding-top:50px;padding-bottom:50px}
     .mob-cta{display:flex}
-    .mob-cta.call{background:var(--gold);color:var(--navy)}
-    .mob-cta.wa{background:#25d366;color:#fff}
-    body{padding-bottom:56px}
+    body{padding-bottom:52px}
     .wrap{padding:0 20px}
-    .principle{padding:30px 26px}
+    .cookie{left:14px;right:14px;max-width:none;bottom:64px}
   }
 </style>
 </head>
@@ -165,36 +173,48 @@
 
 <div class="head">
   <div class="wrap">
-    <div class="brand">
-      <img src="assets/logo-88.png" alt="Адвокатский кабинет Дементьева Александра Фёдоровича">
-      <div>
-        <b>Дементьев Александр Фёдорович</b>
-        <small>Адвокатский кабинет Дементьева Александра Фёдоровича</small>
-      </div>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#specs">Направления</a>
+      <a href="#cases">Практика</a>
+      <a href="#how">Порядок работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="contact">
+      <a class="tel" href="tel:+79992340701">+7 999 234-07-01</a>
+      <a class="connect" href="#contacts">Связаться</a>
     </div>
-    <a class="tel" href="tel:+79992340701">+7 999 234-07-01</a>
   </div>
 </div>
 
-<div class="poster">
+<div class="hero">
   <div class="wrap">
+    <div class="photo"><img src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат"></div>
     <div>
-      <h1><small>Адвокат · реестровый номер 76/966</small>Дементьев Александр Фёдорович</h1>
-      <p class="spec">Споры по договорам строительного подряда, банкротство, субсидиарная ответственность. <b>Королёв и Московская область</b>, суды Москвы и области — очно, регионы — веб-конференция.</p>
+      <h1>Адвокат<br>Дементьев Александр Фёдорович</h1>
+      <p class="org">Адвокатский кабинет Дементьева Александра Фёдоровича</p>
+      <p class="spec">Строительные споры, банкротство, субсидиарная ответственность</p>
+      <p class="formal">Адвокат Адвокатской палаты Ярославской области.<br>Реестровый номер 76/966.</p>
+      <p class="since">Адвокатская практика с 2023 года.</p>
       <div class="cta-row">
-        <a class="btn btn-gold" href="tel:+79992340701">Позвонить</a>
-        <a class="btn btn-outline-dark" href="tg://resolve?phone=79992340701">Написать в Telegram</a>
+        <a class="btn btn-solid" href="tel:+79992340701">Позвонить</a>
+        <a class="btn btn-line" href="tg://resolve?phone=79992340701">Написать в Telegram</a>
       </div>
     </div>
-    <div class="portrait"><img src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат"></div>
   </div>
 </div>
 
-<section id="dirs">
+<div class="quote">
+  <p>«Не важно, на чьей стороне сила; важно то, на чьей стороне право».<br>— Наполеон Бонапарт</p>
+</div>
+
+<section id="specs">
   <div class="wrap">
-    <h2>Направления практики</h2>
-    <div class="dirs">
-      <div class="dir">
+    <h2 class="sec-title">Профессиональная специализация</h2>
+    <p class="sec-sub">Практика сосредоточена на двух категориях споров — строительном подряде и банкротстве. Смежные требования (неустойка, убытки, обеспечительные меры) сопровождаю в рамках тех же дел.</p>
+    <div class="specs">
+      <div class="spec-card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg>
         <h3>Строительный подряд</h3>
         <ul>
           <li>Взыскание оплаты выполненных работ, неустойки и убытков</li>
@@ -204,14 +224,15 @@
           <li>Оспаривание включения в реестр недобросовестных поставщиков</li>
         </ul>
       </div>
-      <div class="dir">
+      <div class="spec-card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 6h5a3 3 0 0 1 0 6H6"/></svg>
         <h3>Банкротство</h3>
         <ul>
-          <li>Включение требований кредиторов в реестр (срок — 2 месяца с публикации)</li>
+          <li>Включение требований кредиторов в реестр — в двухмесячный срок с публикации</li>
           <li>Защита директора и участников при субсидиарной ответственности</li>
           <li>Оспаривание сделок должника</li>
-          <li>Исполнение решения: поиск активов, взыскание убытков с контролирующих лиц</li>
-          <li>Сопровождение кредитора на всех стадиях банкротства</li>
+          <li>Поиск активов, взыскание убытков с контролирующих лиц</li>
+          <li>Сопровождение кредитора на всех стадиях дела</li>
         </ul>
       </div>
     </div>
@@ -220,90 +241,108 @@
 
 <div class="wrap">
   <div class="principle">
-    <p>Оценка перспектив — только по документам. <b>Если оснований для спора нет, сообщу об этом до заключения соглашения.</b> Стоимость работы фиксируется в соглашении и не меняется в процессе.</p>
+    <p style="text-align:center;padding:26px 20px;font-size:1.08rem;line-height:1.6;color:#39424b">Оценка перспектив дела — только по документам. Если оснований для спора нет, сообщу об этом до заключения соглашения. Стоимость работы фиксируется в соглашении и не меняется в процессе.</p>
   </div>
 </div>
 
-<section id="cases" style="padding-top:24px">
+<section id="cases" style="padding-top:26px">
   <div class="wrap">
-    <h2>Из практики</h2>
+    <h2 class="sec-title">Из практики</h2>
     <div class="cases">
       <div class="case">
-        <b>Взыскание оплаты по госконтракту</b>
-        <p>Работы приняты по актам, оплата не перечислялась 11 месяцев, заказчик ссылался на брак. Экспертиза подтвердила соответствие качества, долг взыскан с неустойкой.</p>
+        <h3>Взыскание оплаты по государственному контракту</h3>
+        <p>Работы приняты по актам, оплата не перечислялась 11 месяцев, заказчик ссылался на брак. Строительно-техническая экспертиза подтвердила соответствие работ условиям контракта; долг взыскан с неустойкой.</p>
       </div>
       <div class="case">
-        <b>Банкротство генподрядчика</b>
-        <p>Требования субподрядчика заявлены в реестр в установленный срок и учтены; параллельно оспорены сделки по выводу техники.</p>
+        <h3>Банкротство генерального подрядчика</h3>
+        <p>Требования субподрядчика заявлены в реестр в установленный срок и учтены. Параллельно оспорены сделки должника по выводу техники, что увеличило конкурсную массу.</p>
       </div>
       <div class="case">
-        <b>Отказ в субсидиарной ответственности</b>
-        <p>Представлены доказательства добросовестности руководителя и отсутствия причинной связи между его действиями и долгами компании.</p>
+        <h3>Отказ в привлечении к субсидиарной ответственности</h3>
+        <p>Суду представлены доказательства добросовестности руководителя и отсутствия причинной связи между его действиями и образованием долгов компании.</p>
       </div>
     </div>
-    <p class="note" style="margin-top:14px">Обстоятельства дел приведены без сведений, позволяющих установить доверителей (ст. 8 ФЗ «Об адвокатской деятельности и адвокатуре в РФ»).</p>
+    <p class="note cases-note">Обстоятельства дел изложены без сведений, позволяющих установить доверителей, в силу ст. 8 Федерального закона «Об адвокатской деятельности и адвокатуре в Российской Федерации».</p>
   </div>
 </section>
 
-<section id="about" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="about" class="about">
   <div class="wrap">
-    <div class="about">
-      <img class="photo" src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат">
-      <div>
-        <h2>Об адвокате</h2>
-        <p>Статус адвоката получен в 2023 году, присвоен реестровый номер 76/966 (Адвокатская палата Ярославской области). Практика сосредоточена на спорах из строительного подряда и банкротстве; смежные требования — неустойка, убытки, обеспечительные меры — веду в рамках тех же дел.</p>
-        <p>Приём в Королёве (Бурковский проезд, 40к1) и дистанционно. В заседаниях участвую лично в судах Москвы и Московской области, по иным регионам — веб-конференция (ст. 153.1 АПК РФ).</p>
-        <div class="reg">Реестровый номер 76/966 · Адвокатская палата Ярославской области · статус подтверждён</div>
-      </div>
+    <img class="photo" src="assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат">
+    <div>
+      <h2>Обо мне</h2>
+      <p>Статус адвоката присвоен в 2023 году, реестровый номер 76/966 (Адвокатская палата Ярославской области). До открытия кабинета вел судебную работу в составе юридических подразделений компаний строительной отрасли — от подготовки претензий до представления интересов в арбитражных судах.</p>
+      <p>Сейчас веду дела по двум направлениям: споры из договоров строительного подряда и банкротные процессы, включая защиту руководителей при субсидиарной ответственности.</p>
+      <p>Приём в Королёве (Бурковский проезд, 40к1) и дистанционно. В заседаниях участвую лично в судах Москвы и Московской области; по иным регионам — веб-конференция (ст. 153.1 АПК РФ).</p>
+      <p>Работаю с договорами по 44-ФЗ и 223-ФЗ, с корпоративными договорами подряда, с делами о взыскании по КС-2/КС-3.</p>
     </div>
   </div>
 </section>
 
 <section id="how">
   <div class="wrap">
-    <h2>Порядок работы</h2>
+    <h2 class="sec-title">Порядок работы</h2>
     <div class="steps">
-      <div class="step"><div class="n">1</div><div><b>Анализ документов</b><p>Вы направляете договор, акты, описание ситуации. Отвечаю: есть ли спор, каковы перспективы, что потребуется. Бесплатно.</p></div></div>
+      <div class="step"><div class="n">1</div><div><b>Анализ документов</b><p>Вы направляете договор, акты, описание ситуации. Отвечаю: есть ли спор, каковы перспективы, что потребуется. Безвозмездно.</p></div></div>
       <div class="step"><div class="n">2</div><div><b>Соглашение</b><p>Стоимость определяется до начала работы — почасовая или за дело — и фиксируется в соглашении об оказании юридической помощи.</p></div></div>
       <div class="step"><div class="n">3</div><div><b>Подготовка и процесс</b><p>Позиция, доказательства, процессуальные документы готовятся дистанционно. В заседаниях — лично либо по веб-конференции.</p></div></div>
-      <div class="step"><div class="n">4</div><div><b>Отчёт по итогам</b><p>После каждого заседания — краткое резюме: результат, следующие шаги, сроки.</p></div></div>
+      <div class="step"><div class="n">4</div><div><b>Отчёт по итогам</b><p>После каждого судебного заседания — краткое резюме: результат, следующие шаги, сроки.</p></div></div>
     </div>
   </div>
 </section>
 
-<div class="final">
+<section id="contacts" class="contacts" style="background:#fff;border-top:1px solid var(--line)">
   <div class="wrap">
-    <h2>Первый шаг — оценка документов</h2>
-    <p>Опишите ситуацию и направьте имеющиеся документы. Отвечу: есть ли перспектива у спора и как строилась бы работа. В течение рабочего дня.</p>
-    <div class="cta-row">
-      <a class="btn btn-gold" href="tel:+79992340701">Позвонить: +7 999 234-07-01</a>
-      <a class="btn btn-outline-dark" href="tg://resolve?phone=79992340701">Написать в Telegram</a>
+    <div>
+      <h2>Контакты</h2>
+      <div class="c-row"><span class="lbl">Телефон</span><span class="val"><a href="tel:+79992340701">+7 999 234-07-01</a> — также Telegram и WhatsApp</span></div>
+      <div class="c-row"><span class="lbl">Почта</span><span class="val"><a href="mailto:89992340701@ya.ru">89992340701@ya.ru</a></span></div>
+      <div class="c-row"><span class="lbl">Адрес</span><span class="val">141060, Московская область, г. Королёв, мкр. Болшево, Бурковский проезд, д. 40, к. 1</span></div>
+      <div class="c-row"><span class="lbl">Реестр</span><span class="val">Реестровый номер 76/966, Адвокатская палата Ярославской области</span></div>
     </div>
-    <p class="note" style="color:#8fa3b3;margin-top:16px">Почта: 89992340701@ya.ru</p>
+    <div class="side">
+      <b>О первичном обращении</b>
+      <p>Опишите ситуацию и направьте имеющиеся документы — по телефону, в Telegram или на почту. Отвечу в течение рабочего дня: есть ли перспектива у спора и как строилась бы работа.</p>
+      <p>Первая оценка документов — безвозмездна и ни к чему не обязывает.</p>
+      <p style="margin-top:16px"><a class="btn btn-solid" href="tel:+79992340701">Позвонить: +7 999 234-07-01</a></p>
+    </div>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="wrap">
-    <div class="row">
+    <div class="cols">
       <div>
-        <div class="brandline">
-          <img src="assets/logo-88.png" alt="Адвокатский кабинет Дементьева Александра Фёдоровича">
-          <div><b>Адвокатский кабинет Дементьева Александра Фёдоровича</b><small>адвокат Дементьев А.Ф. · реестровый номер 76/966 · Адвокатская палата Ярославской области</small></div>
-        </div>
-        141060, Московская область, г. Королёв, мкр. Болшево, Бурковский проезд, д. 40, к. 1<br>
+        <b>Адвокатский кабинет Дементьева Александра Фёдоровича</b><br>
+        адвокат Дементьев А.Ф., реестровый номер 76/966, Адвокатская палата Ярославской области<br>
         <a href="tel:+79992340701">+7 999 234-07-01</a> · <a href="mailto:89992340701@ya.ru">89992340701@ya.ru</a>
       </div>
-      <div style="max-width:420px;font-size:.84rem;color:#7d92a5">
-        Информация на сайте носит справочный характер и не является обещанием результата по конкретному делу. Обстоятельства каждого дела оцениваются отдельно.
+      <div style="text-align:right">
+        <a class="top" href="javascript:void(0)" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Наверх ↑</a><br>
+        © 2026 Дементьев Александр Фёдорович<br>
+        Все права на материалы сайта защищены.
       </div>
+    </div>
+    <div class="footer-disclaimer">
+      Адвокат осуществляет свою деятельность в соответствии с Федеральным законом от 31 мая 2002 г. № 63-ФЗ «Об адвокатской деятельности и адвокатуре в Российской Федерации». Размещённая на сайте информация не является рекламой и носит информационный характер; не является обещанием результата по конкретному делу. Обстоятельства каждого дела оцениваются отдельно.
     </div>
   </div>
 </footer>
 
+<div class="cookie" id="cookieBox">
+  Продолжая использовать сайт, вы даёте согласие на обработку файлов cookie и персональных данных в соответствии с <a href="#pdn">политикой обработки персональных данных</a>.
+  <br><button onclick="document.getElementById('cookieBox').style.display='none';try{localStorage.setItem('cookieOk','1')}catch(e){}">Согласен</button>
+</div>
+<script>try{if(localStorage.getItem('cookieOk'))document.getElementById('cookieBox').style.display='none'}catch(e){}</script>
+
 <div class="mob-cta-bar">
   <a class="mob-cta call" href="tel:+79992340701">📞 Позвонить</a>
   <a class="mob-cta wa" href="tg://resolve?phone=79992340701">💬 Telegram</a>
+</div>
+
+<div id="pdn" style="max-width:var(--container);margin:0 auto;padding:40px 30px 60px;font-size:.88rem;color:#5a626a;line-height:1.7">
+  <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:14px;color:var(--ink)">Политика обработки персональных данных</h2>
+  <p>Сайт не содержит форм сбора персональных данных. Обращение по указанным на сайте каналам связи (телефон, Telegram, электронная почта) означает согласие на обработку персональных данных, необходимых для подготовки ответа и оценки обстоятельств дела, в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных». Персональные данные не передаются третьим лицам и не используются для рассылок. Отзыв согласия — направлением сообщения по адресу 89992340701@ya.ru.</p>
 </div>
 
 </body>
