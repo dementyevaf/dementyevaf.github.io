@@ -10,6 +10,7 @@
 <meta name="description" content="Адвокат по строительным спорам и банкротству. Субсидиарная ответственность. Королёв, Мытищи, Пушкино, Москва и МО. Первичная консультация — безвозмездно.">
 <link rel="canonical" href="https://adv-dementev.ru/">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="Адвокат Дементьев Александр Фёдорович">
 <meta property="og:description" content="Строительные споры и банкротство. Королёв, суды Москвы и области, веб-конференции по России.">
 <meta property="og:image" content="https://adv-dementev.ru/assets/og-cover.jpg">
@@ -83,6 +84,9 @@
   /* ── Хедер: меню-якоря, как в модели ФПА ── */
   .head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line)}
   .head .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .head .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.95rem;white-space:nowrap}
+  .head .brand img{border-radius:7px;display:block}
+  @media(max-width:900px){.head .brand span{display:none}}
   .head nav{display:flex;gap:26px;padding:16px 0}
   .head nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.93rem;letter-spacing:.02em}
   .head nav a:hover{color:var(--accent)}
@@ -294,6 +298,7 @@
 
 <div class="head">
   <div class="wrap">
+    <a class="brand" href="/" aria-label="На главную"><img src="assets/logo-88.png" alt="Логотип — щит с весами правосудия" width="34" height="34"><span>Адвокатский кабинет Дементьева А.Ф.</span></a>
     <nav>
       <a href="#about">Обо мне</a>
       <a href="#when">Ситуации</a>
