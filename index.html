@@ -86,13 +86,20 @@
   .head{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line)}
   .head .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
   .head .wrap{flex-wrap:nowrap}
+    footer{padding-bottom:74px}
   .head .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:.93rem;white-space:nowrap;flex-shrink:0}
   .head .brand img{border-radius:7px;display:block;flex-shrink:0}
   .head nav{display:flex;gap:26px;padding:16px 0;margin:0 auto;justify-content:center}
   .head nav a{white-space:nowrap}
   .head .contact{flex-shrink:0}
   @media(max-width:1060px){.head .brand span{display:none}}
-  @media(max-width:1060px){.head nav{margin:0}}
+  @media(max-width:1060px){.head nav{margin:0}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-left:auto}
+  .burger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;transition:transform .25s,opacity .25s}
+  .burger.open span:nth-child(1){transform:translateY(14px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-14px) rotate(-45deg)}
+}
   .head nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.93rem;letter-spacing:.02em}
   .head nav a:hover{color:var(--accent)}
   .head .contact{display:flex;align-items:center;gap:18px}
@@ -318,7 +325,12 @@
   .wa-btn:hover{background:#1f8a4c;color:#fff}
 
   @media(max-width:900px){
-    .head nav{display:none}
+    .head .burger{display:block}
+    .head nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:6px 20px 14px;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+    .head nav.open{display:flex}
+    .head nav a{padding:12px 4px;border-bottom:1px solid var(--line);font-size:1rem}
+    .head nav a:last-child{border-bottom:0}
+    .head .wrap{flex-wrap:nowrap}
     .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:46px;padding-bottom:50px;min-height:0}
     .hero .photo{max-width:360px;margin:0 auto}
     .specs,.cases,.steps,.pains{grid-template-columns:1fr}
@@ -431,6 +443,7 @@
       <a href="#how">Порядок работы</a>
       <a href="#contacts">Контакты</a>
     </nav>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="contact">
       <a class="tel" href="tel:+79992340701">+7 999 234-07-01</a>
       <a class="connect" href="#contacts">Связаться</a>
@@ -660,9 +673,7 @@
         <a href="tel:+79992340701">+7 999 234-07-01</a> · <a href="mailto:89992340701@ya.ru">89992340701@ya.ru</a>
       </div>
       <div class="f-right">
-        <nav class="f-nav">
-          <a href="#when">Ситуации</a> · <a href="#specs">Направления</a> · <a href="#cases">Практика</a> · <a href="#about">Обо мне</a> · <a href="#how">Порядок работы</a> · <a href="#faq">Частые вопросы</a> · <a href="#contacts">Контакты</a> · <a href="/stroitelnye-spory/">Споры по подряду</a> · <a href="/bankrotstvo/">Банкротство</a> · <a href="/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
-        </nav><br>
+        <a href="/stroitelnye-spory/">Споры по подряду</a> · <a href="/bankrotstvo/">Банкротство</a> · <a href="/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a><br>
         <a class="top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Наверх ↑</a><br>
         © 2026 Дементьев Александр Фёдорович<br>
         Все права на материалы сайта защищены.
@@ -733,6 +744,22 @@
   function auto(){timer=setInterval(function(){go(idx+1)},7000);}
   dots.forEach(function(d,i){d.addEventListener('click',function(){clearInterval(timer);go(i);auto();});});
   auto();
+})();
+</script>
+
+<script>
+(function(){
+  var b=document.getElementById('burger');
+  if(!b) return;
+  var nav=document.querySelector('.head nav');
+  b.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    b.classList.toggle('open',open);
+    b.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
 })();
 </script>
 </body>
