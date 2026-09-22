@@ -72,7 +72,7 @@
   
   :root{
     --bg:#fbfbfa; --card:#fff; --ink:#1c1f22; --muted:#6a7178; --line:#e8e8e6;
-    --navy:#17222c; --accent:#2e4a63;--gold:#c9b98f; --line-dark:#dfe2e5;
+    --navy:#17222c; --accent:#2e4a63;--gold:#c9b98f;--gold-strong:#8a7a52; --line-dark:#dfe2e5;
     --container:1040px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -107,7 +107,7 @@
   .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px}
   .hero .photo{position:relative}
   .photo img{border:1px solid rgba(255,255,255,.14);border-radius:4px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
-  .hero .photo img{width:100%;display:block;border-radius:6px;filter:grayscale(18%) contrast(1.05);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+  .hero .photo img{width:100%;display:block;border-radius:6px;filter:grayscale(18%) contrast(1.05);box-shadow:0 14px 40px rgba(0,0,0,.35);border:1.5px solid rgba(201,185,143,.5)}
   .hero h1{font-size:clamp(1.9rem,3.2vw,2.6rem);font-weight:700;line-height:1.22;margin-bottom:10px;letter-spacing:.004em;color:#fff}
   .hero-name{font-size:1.08rem;color:var(--gold);font-weight:600;letter-spacing:.02em;margin-bottom:16px}
 .hero .spec{font-size:1.03rem;color:#b9c3cc;margin-bottom:26px;line-height:1.68;max-width:56ch}
@@ -116,9 +116,9 @@
   /* Цитата-девиз между линиями (модель ФПА) */
   .quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
 .quote .wrap{position:relative}
-.q-slider{position:relative;min-height:96px}
-.q-slide{position:absolute;inset:0;opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none}
-.q-slide.is-active{opacity:1;pointer-events:auto}
+.q-slider{display:grid}
+.q-slide{grid-area:1/1;opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none;visibility:hidden}
+.q-slide.is-active{opacity:1;pointer-events:auto;visibility:visible}
 .q-dots{display:flex;gap:10px;justify-content:center;margin-top:18px}
 .q-dot{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .25s}
 .q-dot.is-active{background:var(--gold)}
@@ -150,7 +150,7 @@
   .specs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
   .spec-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:38px 34px;text-align:left}
   .pains{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:920px;margin:0 auto}
-  .pain{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:22px 24px;box-shadow:0 1px 2px rgba(13,31,48,.04)}
+  .pain{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold-strong);border-radius:0 6px 6px 0;padding:22px 24px;box-shadow:0 1px 2px rgba(13,31,48,.04)}
   .pain b{display:block;font-size:1.02rem;margin-bottom:5px;color:var(--ink);line-height:1.4}
   .pain span{font-size:.94rem;color:#5d6b79;line-height:1.55}
 
@@ -267,7 +267,7 @@
 
 
   .btn{display:inline-block;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.94rem;white-space:nowrap;text-align:center;letter-spacing:.02em;transition:background .15s,color .15s}
-  .btn-solid{background:#fff;color:var(--navy)}
+  .btn-solid{background:var(--gold);color:#1b2733}
   .btn-solid:hover{background:#e9edef}
   .btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
   .btn-line:hover{background:rgba(255,255,255,.12);border-color:#fff}
@@ -441,8 +441,7 @@
       <div class="cta-row">
         <a class="btn btn-solid" href="tel:+79992340701">Позвонить</a>
         <a class="btn btn-line" href="https://t.me/Dementyev">Написать в Telegram</a>
-        <a class="btn btn-line" href="https://wa.me/79992340701" target="_blank" rel="noopener">Написать в WhatsApp</a>
-      </div>
+        </div>
     </div>
   </div>
 </div>
@@ -511,10 +510,6 @@
     </div>
   </div>
 </section>
-
-<div class="quote">
-  <p>Процессуальные документы пишу сам — без «прослойки» из junior-юристов. После каждого заседания — короткое резюме: что решил суд и когда следующий шаг. Стоимость работы фиксируется в соглашении и не меняется в процессе.</p>
-</div>
 
 <section id="cases" class="cases-sec sec-alt">
   <div class="wrap reveal">
