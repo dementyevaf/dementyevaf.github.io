@@ -72,7 +72,7 @@
   
   :root{
     --bg:#fbfbfa; --card:#fff; --ink:#1c1f22; --muted:#6a7178; --line:#e8e8e6;
-    --navy:#17222c; --accent:#2e4a63; --line-dark:#dfe2e5;
+    --navy:#17222c; --accent:#2e4a63;--gold:#c9b98f; --line-dark:#dfe2e5;
     --container:1040px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -97,7 +97,7 @@
   .head nav a:hover{color:var(--accent)}
   .head .contact{display:flex;align-items:center;gap:18px}
   .head .tel{font-weight:700;color:var(--navy);text-decoration:none;font-size:1rem;white-space:nowrap}
-  .head .connect{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);border-radius:6px;padding:8px 18px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.04em;white-space:nowrap}
+  .head .connect{display:inline-block;border:1.5px solid var(--gold);color:#1b2733;background:var(--gold);border-radius:6px;padding:8px 18px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.04em;white-space:nowrap}
   .head .connect:hover{background:var(--accent);color:#fff}
 
   /* ── Hero тёмный (контраст-якорь) ── */
@@ -107,16 +107,25 @@
   .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px}
   .hero .photo{position:relative}
   .photo img{border:1px solid rgba(255,255,255,.14);border-radius:4px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
-  .hero .photo img{width:100%;display:block;border-radius:4px;filter:grayscale(18%) contrast(1.05)}
-  .hero h1{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:700;line-height:1.18;margin-bottom:18px;letter-spacing:.004em;color:#fff}
-  .hero .spec{font-size:1.06rem;color:#b9c3cc;margin-bottom:24px;line-height:1.68}
+  .hero .photo img{width:100%;display:block;border-radius:6px;filter:grayscale(18%) contrast(1.05);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+  .hero h1{font-size:clamp(1.9rem,3.2vw,2.6rem);font-weight:700;line-height:1.22;margin-bottom:10px;letter-spacing:.004em;color:#fff}
+  .hero-name{font-size:1.08rem;color:var(--gold);font-weight:600;letter-spacing:.02em;margin-bottom:16px}
+.hero .spec{font-size:1.03rem;color:#b9c3cc;margin-bottom:26px;line-height:1.68;max-width:56ch}
   .hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 
   /* Цитата-девиз между линиями (модель ФПА) */
   .quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.quote .wrap{position:relative}
+.q-slider{position:relative;min-height:96px}
+.q-slide{position:absolute;inset:0;opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none}
+.q-slide.is-active{opacity:1;pointer-events:auto}
+.q-dots{display:flex;gap:10px;justify-content:center;margin-top:18px}
+.q-dot{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .25s}
+.q-dot.is-active{background:var(--gold)}
+
   .quote p{position:relative;max-width:680px;margin:0 auto;padding:44px 56px;text-align:center;font-style:italic;font-size:1.13rem;color:#39424b;line-height:1.65}
-  .quote p::before{content:"«";position:absolute;left:14px;top:6px;font-family:'PT Serif',serif;font-size:3.6rem;color:#c9b98f;line-height:1}
-  .quote p::after{content:"»";position:absolute;right:14px;bottom:10px;font-family:'PT Serif',serif;font-size:3.6rem;color:#c9b98f;line-height:1}
+  .quote p::before{content:"«";position:absolute;left:14px;top:6px;font-family:'PT Serif',serif;font-size:3.6rem;color:var(--gold);line-height:1}
+  .quote p::after{content:"»";position:absolute;right:14px;bottom:10px;font-family:'PT Serif',serif;font-size:3.6rem;color:var(--gold);line-height:1}
 
   section{padding:70px 0}
   .sec-alt{background:#f3f4f5;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -133,7 +142,7 @@
   .specs-dark .spec-card p{color:#aeb9c2}
   .specs-dark .spec-card li{color:#aeb9c6;border-bottom-color:#2b3640}
   .specs-dark .spec-card .ico{color:#c9b98f}
-  .spec-card .more{display:inline-block;margin-top:14px;font-size:.9rem;font-weight:700;color:#c9b98f;text-decoration:none;border-bottom:1px solid rgba(201,185,143,.4)}
+  .spec-card .more{display:inline-block;margin-top:14px;font-size:.9rem;font-weight:700;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,185,143,.4)}
   .spec-card .more:hover{border-bottom-color:#c9b98f}
   .specs-dark .spec-card:hover{box-shadow:0 16px 40px -18px rgba(0,0,0,.55);border-color:#3a4650}
 
@@ -141,7 +150,7 @@
   .specs{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:880px;margin:0 auto}
   .spec-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:38px 34px;text-align:left}
   .pains{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:920px;margin:0 auto}
-  .pain{background:var(--card);border:1px solid var(--line);border-left:3px solid #b9a379;border-radius:0 6px 6px 0;padding:22px 24px;box-shadow:0 1px 2px rgba(13,31,48,.04)}
+  .pain{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:22px 24px;box-shadow:0 1px 2px rgba(13,31,48,.04)}
   .pain b{display:block;font-size:1.02rem;margin-bottom:5px;color:var(--ink);line-height:1.4}
   .pain span{font-size:.94rem;color:#5d6b79;line-height:1.55}
 
@@ -179,7 +188,7 @@
   .step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
   .step>div{min-width:0}
   .step:last-child,.step:nth-last-child(2):nth-child(odd){border-bottom:none}
-  .step .n{font-family:'PT Serif',serif;font-size:2.5rem;font-weight:700;color:#c9b98f;line-height:1;width:64px;flex-shrink:0}
+  .step .n{font-family:'PT Serif',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1;width:64px;flex-shrink:0}
   .step b{display:block;font-size:1.03rem;margin-bottom:4px}
   .step p{font-size:.94rem;color:var(--muted);line-height:1.62}
 
@@ -191,7 +200,7 @@
   .price b{font-size:1.02rem;white-space:nowrap;color:var(--navy)}
   .price-note{max-width:900px;margin:14px auto 0;font-size:.88rem;color:var(--muted);text-align:center}
 
-  html{overflow-x:hidden}
+  html{overflow-x:hidden}section[id]{scroll-margin-top:76px}
   .steps{gap:0 40px}
   .step{flex-wrap:wrap}
   .step .n{flex-shrink:0}
@@ -226,7 +235,7 @@
   .faq details{background:var(--card);border:1px solid var(--line);border-left:3px solid #c9b98f;border-radius:0 6px 6px 0;padding:0;margin-bottom:12px}
   .faq summary{cursor:pointer;padding:16px 22px;font-weight:700;font-size:1rem;list-style:none;position:relative}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:#c9b98f;font-weight:400;transition:transform .2s ease}
+  .faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--gold);font-weight:400;transition:transform .2s ease}
   .faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
   .faq details[open] summary{border-bottom:1px solid var(--line)}
   .faq details p{padding:14px 22px 18px;color:#39424b;font-size:.97rem;line-height:1.7;margin:0}
@@ -257,7 +266,7 @@
   /* Cookie-уведомление (модель ФПА, 152-ФЗ) */
 
 
-  .btn{display:inline-block;padding:13px 28px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.98rem;text-align:center;letter-spacing:.02em;transition:background .15s,color .15s}
+  .btn{display:inline-block;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.94rem;white-space:nowrap;text-align:center;letter-spacing:.02em;transition:background .15s,color .15s}
   .btn-solid{background:#fff;color:var(--navy)}
   .btn-solid:hover{background:#e9edef}
   .btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
@@ -280,7 +289,7 @@
     .reveal,.hero .photo img{opacity:1 !important;transform:none !important}
   }
   html{scroll-padding-top:74px}
-  .sec-num{display:inline-block;font-family:'PT Serif',serif;font-size:2.6rem;font-weight:700;color:#c9b98f;margin-right:18px;vertical-align:-6px;line-height:1}
+  .sec-num{display:inline-block;font-family:'PT Serif',serif;font-size:2.6rem;font-weight:700;color:var(--gold);margin-right:18px;vertical-align:-6px;line-height:1}
   .sec-title{display:flex;align-items:baseline;gap:2px;text-align:left;font-size:clamp(1.6rem,3vw,2.3rem);max-width:var(--container);margin-left:auto;margin-right:auto}
   .tel,.head .tel,.c-row .val{font-variant-numeric:tabular-nums}
   .btn{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
@@ -325,7 +334,7 @@
     .quote p::after{right:2px;bottom:2px;font-size:2.4rem}
   }
   /* Кнопка наверх */
-  .to-top{position:fixed;right:22px;bottom:84px;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .25s;transform:translateY(8px);z-index:90;border:none;cursor:pointer}
+  .to-top{position:fixed;right:22px;bottom:84px;width:46px;height:46px;border-radius:50%;background:rgba(20,27,34,.85);color:var(--gold);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .25s;transform:translateY(8px);z-index:90;border:none;cursor:pointer}
   .to-top.show{opacity:.92;visibility:visible;transform:none}
   .to-top:hover{opacity:1;transform:translateY(-2px)}
   .to-top svg{width:20px;height:20px}
@@ -426,8 +435,9 @@
   <div class="wrap">
     <div class="photo"><img src="/assets/photo.jpg" alt="Дементьев Александр Фёдорович, адвокат" width="420" height="420" fetchpriority="high"></div>
     <div>
-      <h1>Строительные споры<br>и банкротство — адвокат<br>Дементьев Александр Фёдорович</h1>
-      <p class="spec">Строительные споры и банкротство: взыскание оплаты, недостатки работ, требования кредиторов, субсидиарная ответственность. Работаю по Королёву, Мытищам, Пушкину, Щёлкову, Ивантеевке, Москве и всей Московской области; другие регионы — веб-конференция.</p>
+      <h1>Строительные споры и&nbsp;банкротство</h1>
+      <p class="hero-name">Адвокат Дементьев Александр Фёдорович</p>
+      <p class="spec">Взыскание оплаты, недостатки работ, требования кредиторов, субсидиарная ответственность. Королёв, Мытищи, Пушкин, Щёлково, Ивантеевка, Москва и вся Московская область; другие регионы — веб-конференция.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="tel:+79992340701">Позвонить</a>
         <a class="btn btn-line" href="https://t.me/Dementyev">Написать в Telegram</a>
@@ -438,7 +448,18 @@
 </div>
 
 <div class="quote">
-  <p>Позиция по делу строится на документах и экспертизе, а не на обещаниях результата. Если спора нет — скажу об этом до подписания соглашения.</p>
+  <div class="wrap">
+    <div class="q-slider" id="qslider">
+      <div class="q-slide is-active"><p>Позиция по делу строится на документах и экспертизе, а не на обещаниях результата. Если спора нет — скажу об этом до подписания соглашения.</p></div>
+      <div class="q-slide"><p>Процессуальные документы пишу сам — без «прослойки» из junior-юристов. После каждого заседания — короткое резюме: что решил суд и когда следующий шаг.</p></div>
+      <div class="q-slide"><p>Стоимость работы фиксируется в соглашении до начала и не меняется в процессе. Первичная оценка перспектив — бесплатно.</p></div>
+      <div class="q-dots" role="tablist" aria-label="Принципы работы">
+        <button class="q-dot is-active" aria-label="Принцип 1"></button>
+        <button class="q-dot"></button>
+        <button class="q-dot"></button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="when" class="sec-alt">
@@ -638,7 +659,7 @@
       </div>
       <div class="f-right">
         <nav class="f-nav">
-          <a href="#when">Ситуации</a> · <a href="#specs">Специализация</a> · <a href="#cases">Практика</a> · <a href="#about">Обо мне</a> · <a href="#how">Порядок</a> · <a href="#faq">Вопросы</a> · <a href="#contacts">Контакты</a> · <a href="/stroitelnye-spory/">Споры по подряду</a> · <a href="/bankrotstvo/">Банкротство</a> · <a href="/subsidiarnaya-otvetstvennost/">Субсидиарка</a>
+          <a href="#when">Ситуации</a> · <a href="#specs">Направления</a> · <a href="#cases">Практика</a> · <a href="#about">Обо мне</a> · <a href="#how">Порядок работы</a> · <a href="#faq">Частые вопросы</a> · <a href="#contacts">Контакты</a> · <a href="/stroitelnye-spory/">Споры по подряду</a> · <a href="/bankrotstvo/">Банкротство</a> · <a href="/subsidiarnaya-otvetstvennost/">Субсидиарная ответственность</a>
         </nav><br>
         <a class="top" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Наверх ↑</a><br>
         © 2026 Дементьев Александр Фёдорович<br>
@@ -696,6 +717,18 @@
     e.preventDefault();
     window.scrollTo({top:0, behavior:'smooth'});
   });
+})();
+</script>
+<script>
+(function(){
+  var slides=document.querySelectorAll('.q-slide'),dots=document.querySelectorAll('.q-dot');
+  if(!slides.length)return;var idx=0,timer;
+  function go(n){idx=(n+slides.length)%slides.length;
+    slides.forEach(function(s,i){s.classList.toggle('is-active',i===idx)});
+    dots.forEach(function(d,i){d.classList.toggle('is-active',i===idx)});}
+  function auto(){timer=setInterval(function(){go(idx+1)},7000);}
+  dots.forEach(function(d,i){d.addEventListener('click',function(){clearInterval(timer);go(i);auto();});});
+  auto();
 })();
 </script>
 </body>
