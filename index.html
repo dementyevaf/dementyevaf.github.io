@@ -196,6 +196,10 @@
   .step{flex-wrap:wrap}
   .step .n{flex-shrink:0}
   .step h3,.step p,.price span{overflow-wrap:anywhere}
+  @media(max-width:1240px){
+    .head .contact{gap:10px}
+    .head .contact .tel{display:none}
+  }
   @media(max-width:980px){
     .steps{grid-template-columns:1fr}
     .pains{grid-template-columns:1fr}
@@ -541,7 +545,8 @@
       <div class="step"><div class="n">2</div><div><b>Соглашение</b><p>Стоимость определяется до начала работы — почасовая или за дело — и фиксируется в соглашении об оказании юридической помощи.</p></div></div>
       <div class="step"><div class="n">3</div><div><b>Подготовка и процесс</b><p>Позиция, доказательства, процессуальные документы готовятся дистанционно. В заседаниях — лично либо по веб-конференции.</p></div></div>
       <div class="step"><div class="n">4</div><div><b>Отчёт по итогам</b><p>После каждого судебного заседания — краткое резюме: результат, следующие шаги, сроки.</p></div></div>
-    
+    </div>
+
     <div class="prices">
       <h3>Ориентиры по стоимости</h3>
       <div class="price-grid">
@@ -553,7 +558,6 @@
       </div>
       <p class="price-note">Точная стоимость фиксируется в соглашении до начала работы и не меняется в процессе. Первичная оценка перспектив — безвозмездно.</p>
     </div>
-</div>
   </div>
 </section>
 
