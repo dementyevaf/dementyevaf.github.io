@@ -179,6 +179,16 @@
   .step b{display:block;font-size:1.03rem;margin-bottom:4px}
   .step p{font-size:.94rem;color:var(--muted);line-height:1.62}
 
+  html,body{overflow-x:hidden}
+  .steps{gap:0 40px}
+  .step{flex-wrap:wrap}
+  .step .n{flex-shrink:0}
+  .step h3,.step p,.price span{overflow-wrap:anywhere}
+  @media(max-width:980px){
+    .steps{grid-template-columns:1fr}
+    .pains{grid-template-columns:1fr}
+    .head .contact .tel{display:none}
+  }
   /* Контакты по модели ФПА */
   .contacts-sec{background:#fff;border-top:1px solid var(--line)}
   .contacts .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding-top:70px;padding-bottom:70px}
