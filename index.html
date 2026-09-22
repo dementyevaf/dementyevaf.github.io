@@ -116,9 +116,11 @@
   /* Цитата-девиз между линиями (модель ФПА) */
   .quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
 .quote .wrap{position:relative}
-.q-slider{display:grid}
-.q-slide{grid-area:1/1;opacity:0;transition:opacity .5s ease;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none;visibility:hidden}
-.q-slide.is-active{opacity:1;pointer-events:auto;visibility:visible}
+.q-slider{display:block}
+.q-slide{display:none}
+.q-slide.is-active{display:flex;flex-direction:column;align-items:center;text-align:center}
+.q-slide.is-active p{opacity:0;transform:translateY(4px);transition:opacity .45s ease,transform .45s ease}
+.q-slide.is-active.on p{opacity:1;transform:none}
 .q-dots{display:flex;gap:10px;justify-content:center;margin-top:18px}
 .q-dot{width:9px;height:9px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;cursor:pointer;transition:background .25s}
 .q-dot.is-active{background:var(--gold)}
@@ -719,8 +721,10 @@
   var slides=document.querySelectorAll('.q-slide'),dots=document.querySelectorAll('.q-dot');
   if(!slides.length)return;var idx=0,timer;
   function go(n){idx=(n+slides.length)%slides.length;
-    slides.forEach(function(s,i){s.classList.toggle('is-active',i===idx)});
-    dots.forEach(function(d,i){d.classList.toggle('is-active',i===idx)});}
+    slides.forEach(function(s,i){s.classList.toggle('is-active',i===idx);s.classList.remove('on')});
+    dots.forEach(function(d,i){d.classList.toggle('is-active',i===idx)});
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      slides[idx].classList.add('on');});});}
   function auto(){timer=setInterval(function(){go(idx+1)},7000);}
   dots.forEach(function(d,i){d.addEventListener('click',function(){clearInterval(timer);go(i);auto();});});
   auto();
