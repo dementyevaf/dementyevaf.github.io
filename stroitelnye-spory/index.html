@@ -175,12 +175,13 @@
   /* Порядок работы */
   .steps{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;max-width:900px;margin:0 auto}
   .step{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .step>div{min-width:0}
   .step:last-child,.step:nth-last-child(2):nth-child(odd){border-bottom:none}
   .step .n{font-family:'PT Serif',serif;font-size:2.5rem;font-weight:700;color:#c9b98f;line-height:1;width:64px;flex-shrink:0}
   .step b{display:block;font-size:1.03rem;margin-bottom:4px}
   .step p{font-size:.94rem;color:var(--muted);line-height:1.62}
 
-  html,body{overflow-x:hidden}
+  html{overflow-x:clip}body{overflow-x:clip}
   .steps{gap:0 40px}
   .step{flex-wrap:wrap}
   .step .n{flex-shrink:0}
@@ -193,6 +194,7 @@
   /* Контакты по модели ФПА */
   .contacts-sec{background:#fff;border-top:1px solid var(--line)}
   .contacts .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding-top:70px;padding-bottom:70px}
+  .contacts .wrap>div{min-width:0}
   .contacts h2{font-size:clamp(1.4rem,2.4vw,1.8rem);font-weight:800;margin-bottom:22px}
   .contacts .c-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
   .contacts .c-row .lbl{min-width:120px;color:var(--muted);font-size:.9rem}
@@ -308,6 +310,12 @@
     .quote p::before{left:2px;top:0;font-size:2.4rem}
     .quote p::after{right:2px;bottom:2px;font-size:2.4rem}
   }
+  /* Кнопка наверх */
+  .to-top{position:fixed;right:22px;bottom:84px;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .25s;transform:translateY(8px);z-index:90;border:none;cursor:pointer}
+  .to-top.show{opacity:.92;visibility:visible;transform:none}
+  .to-top:hover{opacity:1;transform:translateY(-2px)}
+  .to-top svg{width:20px;height:20px}
+  @media(max-width:900px){.to-top{bottom:86px;right:16px;width:42px;height:42px}}
 </style>
 <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -519,6 +527,20 @@
     var hi=document.querySelector('.hero .photo img');
     if(hi){ if(hi.complete) hi.classList.add('in'); else hi.addEventListener('load',function(){hi.classList.add('in')}); }
   }catch(e){}
+})();
+</script>
+<a href="#top" class="to-top" id="toTop" aria-label="Наверх"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+<script>
+(function(){
+  var btn = document.getElementById('toTop');
+  if(!btn) return;
+  var show = function(){ btn.classList.toggle('show', window.scrollY > 480); };
+  window.addEventListener('scroll', show, {passive:true});
+  show();
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
 })();
 </script>
 </body>
