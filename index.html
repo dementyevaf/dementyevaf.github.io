@@ -104,7 +104,7 @@
   .hero{background:linear-gradient(135deg,#1b2733 0%,#141b22 78%);border-bottom:none;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 85% 10%,rgba(255,255,255,.05),transparent 60%);pointer-events:none}
   .hero .wrap{position:relative;z-index:1}
-  .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px}
+  .hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;padding-top:76px;padding-bottom:76px;min-height:calc(100vh - 58px);box-sizing:border-box}
   .hero .photo{position:relative}
   .photo img{border:1px solid rgba(255,255,255,.14);border-radius:4px;box-shadow:0 30px 70px -30px rgba(0,0,0,.6)}
   .hero .photo img{width:100%;display:block;border-radius:6px;filter:grayscale(18%) contrast(1.05);box-shadow:0 14px 40px rgba(0,0,0,.35);border:1.5px solid rgba(201,185,143,.5)}
@@ -314,7 +314,7 @@
 
   @media(max-width:900px){
     .head nav{display:none}
-    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:46px;padding-bottom:50px}
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding-top:46px;padding-bottom:50px;min-height:0}
     .hero .photo{max-width:360px;margin:0 auto}
     .specs,.cases,.steps,.pains{grid-template-columns:1fr}
     .about .wrap,.contacts .wrap{grid-template-columns:1fr;gap:26px}
